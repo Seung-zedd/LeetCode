@@ -1,12 +1,14 @@
 class Solution(object):
     def canVisitAllRooms(self, rooms):
-        def dfs(room_number):
-            visited.add(room_number)
+        visited_room = set()
 
-            for key in rooms[room_number]:
-                if key not in visited:
-                    dfs(key)
-                    
-        visited = set()
+        def dfs(room_number):
+            visited_room.add(room_number)
+
+            # 시간복잡도: 3000
+            for room in rooms[room_number]:
+                if room not in visited_room:
+                    dfs(room)
         dfs(0)
-        return len(visited) == len(rooms)
+
+        return len(rooms) == len(visited_room)
