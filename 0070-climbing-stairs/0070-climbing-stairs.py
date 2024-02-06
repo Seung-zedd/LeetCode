@@ -1,11 +1,14 @@
 class Solution(object):
     def climbStairs(self, n):
-        memo = {1: 1, 2: 2}
+        memo = {}
+        return self.dp(n, memo)
 
-        if n == 1 or  n == 2:
+    def dp(self, n, memo):
+        # base cases
+        if n == 1 or n == 2:
+            return n
+        if n in memo:
             return memo[n]
         
-        if n >= 3:
-            for i in range(3, n+1):
-                memo[i] = memo[i-1] + memo[i-2]
-            return memo[i]
+        memo[n] = self.dp(n-2, memo) + self.dp(n-1, memo)
+        return memo[n]
