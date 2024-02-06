@@ -10,5 +10,5 @@ class Solution(object):
         if n in memo:
             return memo[n]
         
-        memo[n] = self.dp(n-2, memo) + self.dp(n-1, memo)
+        memo[n] = self.dp(n-1, memo) + self.dp(n-2, memo)
         return memo[n]
