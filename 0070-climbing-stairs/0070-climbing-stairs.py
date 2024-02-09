@@ -7,17 +7,15 @@
 # @lc code=start
 class Solution(object):
     def climbStairs(self, n):
-    # memo를 전역변수로 두기 위해 dp라는 함수를 새로 만듦
         memo = {}
-        return self.dp(n, memo)
         
-    def dp(self, n, memo): # self는 Solution의 인스턴스이기 때문에 동일하게 함수 depth를 두어야함
-        if n == 1 or n == 2:
-            return n
-        if n not in memo:
-            memo[n] = self.dp(n-1, memo) + self.dp(n-2, memo)
-        return memo[n]
-
+        def dp(n): # 부모의 memo를 사용하기 위해 자식 함수 생성
+            if n == 1 or n == 2:
+                return n
+            if n not in memo:
+                memo[n] = dp(n-1)+dp(n-2)
+            return memo[n]
+        return dp(n) # dp(n)을 호출하면서 n 또는 memo[n]의 결과를 뱉어냄
+    
 sol = Solution()
-print(sol.climbStairs(10))
 print(sol.climbStairs(5))
