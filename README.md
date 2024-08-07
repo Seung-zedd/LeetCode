@@ -39,4 +39,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/Seung-zedd/LeetCode/tree/master/0070-climbing-stairs) |
+## Array
+|  |
+| ------- |
+| [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
+## Breadth-First Search
+|  |
+| ------- |
+| [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
+## Matrix
+|  |
+| ------- |
+| [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
 <!---LeetCode Topics End-->
