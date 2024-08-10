@@ -1,13 +1,10 @@
 class Solution(object):
     def uniquePaths(self, m, n):
         memo = {}
-
-        def dfs(r, c):
-            if r == 0 or c == 0: # base condition
+        def fact(x):
+            if x <= 1:
                 return 1
-            # 경계값 범위 이동 조건
-            if r - 1 >= 0 and c - 1 >= 0:
-                if (r, c) not in memo:
-                    memo[(r, c)] = dfs(r - 1, c) + dfs(r, c - 1)
-            return memo[(r, c)]
-        return dfs(m - 1, n - 1)
+            if x not in memo: 
+                memo[x] = fact(x - 1) * x # factorial의 결과값을 메모리에 저장
+            return memo[x]
+        return fact(m + n - 2) / (fact(m - 1) * fact(n - 1))
