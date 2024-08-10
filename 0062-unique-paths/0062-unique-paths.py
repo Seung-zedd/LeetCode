@@ -1,10 +1,17 @@
 class Solution(object):
     def uniquePaths(self, m, n):
         memo = {}
-        def fact(x):
-            if x <= 1:
+
+        def dfs(r, c):
+            if (r, c) == (0, 0): # base condition
                 return 1
-            if x not in memo: 
-                memo[x] = fact(x - 1) * x # factorial의 결과값을 메모리에 저장
-            return memo[x]
-        return fact(m + n - 2) / (fact(m - 1) * fact(n - 1))
+            if (r, c) not in memo:
+            	unique_paths = 0
+    # 경계값을 따로 설정해줘야함(안그러면, 가장자리에 있을때 항상 거짓이되서 NoneType을 반환)
+            	if r - 1 >= 0: # 위쪽 셀에서 오는 경우
+                	unique_paths += dfs(r - 1, c)
+                if c - 1 >= 0: # 왼쪽 셀에서 오는 경우
+                	unique_paths += dfs(r, c - 1)
+                memo[(r, c)] = unique_paths
+            return memo[(r, c)]
+        return dfs(m - 1, n - 1)
