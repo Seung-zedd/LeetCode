@@ -1,15 +1,14 @@
 class Solution(object):
-    def uniquePaths(self, m, n):  # (m,n)은 row x col
-        memo = {}
+    def uniquePaths(self, m, n):
+        table = {(0, 0): 1}  # converted from if (r, c) == (0,0):
 
-        def dfs(x, y):  # (x,y)는 좌표임
-            # 경계값 설정(안그러면 stack_over_flow)
-            if x < 0 or y < 0:
-                return 0 # 화살표가 없으니까 0 처리
-            if (x, y) == (0, 0):  # 시작점이면
-                return 1  # 1가지를 리턴(그래야 더해지니까)
-            if (x, y) not in memo:
-                memo[(x, y)] = dfs(x - 1, y) + dfs(x, y - 1)
-            return memo[(x, y)]
-
-        return dfs(m - 1, n - 1)  # 종점의 좌표부터 시작
+        def dp(r, c):  # (2, 6)
+            # Don't have to set bounded range because no recursive calls are made to r-1 or c-1
+            for i in range(r + 1):
+                for j in range(c + 1):
+                    if i == 0 or j == 0:  # Fill both the 1st row and col with 1
+                        table[(i, j)] = table[(0, 0)]
+                    if i > 0 and j > 0: # Combine the cell below and the cell to the right
+                        table[(i, j)] = table[(i - 1, j)] + table[(i, j - 1)]
+            return table[(r, c)]
+        return dp(m - 1, n - 1)
