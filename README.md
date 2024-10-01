@@ -44,6 +44,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/Seung-zedd/LeetCode/tree/master/0001-two-sum) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Breadth-First Search
 |  |
@@ -74,4 +75,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0744-network-delay-time](https://github.com/Seung-zedd/LeetCode/tree/master/0744-network-delay-time) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/Seung-zedd/LeetCode/tree/master/0001-two-sum) |
 <!---LeetCode Topics End-->
