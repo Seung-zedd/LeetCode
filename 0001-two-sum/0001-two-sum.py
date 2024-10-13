@@ -1,10 +1,10 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        dict = {} # {number: index} due to return of index
-        
-        for i, num in enumerate(nums):
-            x = target - num
+        num_to_index = {}
 
-            if x in dict:
-                return [dict[x], i] # {2: 0, 1}
-            dict[num] = i # {2: 0}
+        for i, num in enumerate(nums):
+            x = target - num # Complement
+
+            if x in num_to_index: # if complement already exists
+                return [num_to_index[x], i] # return complement's index and current index(by doing so, there is no chance to use the same element twice)
+            num_to_index[num] = i # otherwise, store the nums in the dictionary first.
