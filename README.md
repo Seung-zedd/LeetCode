@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0001-two-sum](https://github.com/Seung-zedd/LeetCode/tree/master/0001-two-sum) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
+| [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -79,4 +80,24 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Seung-zedd/LeetCode/tree/master/0001-two-sum) |
+## Linked List
+|  |
+| ------- |
+| [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
+## Stack
+|  |
+| ------- |
+| [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
+## Design
+|  |
+| ------- |
+| [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
+## Data Stream
+|  |
+| ------- |
+| [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
 <!---LeetCode Topics End-->
