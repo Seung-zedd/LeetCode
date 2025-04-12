@@ -87,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Stack
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/Seung-zedd/LeetCode/tree/master/0020-valid-parentheses) |
 | [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
 ## Design
 |  |
@@ -100,4 +101,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
+## String
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Seung-zedd/LeetCode/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
