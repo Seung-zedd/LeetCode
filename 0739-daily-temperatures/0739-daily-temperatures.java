@@ -1,19 +1,19 @@
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
-        Stack<Integer> tempStack = new Stack<>();
-        Stack<Integer> dayStack = new Stack<>();
+        Deque<Integer> tempQueue = new LinkedList<>();
+        Deque<Integer> dayQueue = new LinkedList<>();
         int[] answer = new int[temperatures.length];
 
         for (int i = 0; i < temperatures.length; i++) {
 
-            while (!tempStack.isEmpty() && (tempStack.peek() < temperatures[i])) {
-                tempStack.pop();
-                Integer prev_day = dayStack.pop();
-                answer[prev_day] = i - prev_day; // 현재 날짜 - 과거 날짜
+            while (!tempQueue.isEmpty() && tempQueue.peek() < temperatures[i]) {
+                tempQueue.remove();
+                Integer prev_day = dayQueue.remove();
+                answer[prev_day] = i - prev_day;
             }
 
-            tempStack.push(temperatures[i]);
-            dayStack.push(i);
+            tempQueue.addFirst(temperatures[i]);
+            dayQueue.addFirst(i);
         }
         return answer;
     }
