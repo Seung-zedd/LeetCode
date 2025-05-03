@@ -12,28 +12,24 @@ class Solution {
        // base condition
         if (root == null) {
             return null;
-        }
-
-        // p와 q 노드를 찾는다.
+        } 
+        
+        // preorder traversal
         if (root == p) {
             return p;
         }
         if (root == q) {
             return q;
         }
-        
-        // p와 q가 특정 subtree에 존재한다는 보장이 없으므로 변수 추가
-        TreeNode findNode1 = lowestCommonAncestor(root.left, p, q);
-        TreeNode findNode2 = lowestCommonAncestor(root.right, p, q);
 
-        // p와 q가 다른 subtree에 존재
-        if ((findNode1 != null) && (findNode2 != null)) {
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        
+        // subtree가 다른 경우
+        if (left != null && right != null) {
             return root;
-        } // p와 q가 같은 subtree에 존재
-        else if (findNode1 == null) {
-            return findNode2;
         } else {
-            return findNode1;
+            return left == null ? right : left;
         }
     }
 }
