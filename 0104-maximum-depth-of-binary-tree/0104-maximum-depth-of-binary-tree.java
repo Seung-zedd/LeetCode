@@ -13,39 +13,42 @@
  *     }
  * }
  */
-class Solution {
+public class Solution {
     public int maxDepth(TreeNode root) {
-        {
+        int level = 0; // start from zero
         // if the root is null
         if (root == null) {
-            return 0;
+            return level;
         }
 
-        // 사전 세팅
-        Queue<TreeNode> q = new LinkedList<>();
-        q.offer(root);
-        int level = 0;
+        Queue<NodeInfo> q = new LinkedList<>();
+        q.offer(new NodeInfo(root, ++level));
 
         while (!q.isEmpty()) {
-            // 현재 레벨의 모든 노드를 처리
-            int size = q.size();
-            level++; // 새 레벨로 이동
+            NodeInfo nodeInfo = q.poll();
+            TreeNode curNode = nodeInfo.node;
+            int curLevel = nodeInfo.level;
 
-            for (int i = 0; i < size; i++) {
-                TreeNode curNode = q.poll();
+            level = Math.max(level, curLevel);
 
-                if (curNode.left != null) {
-                    q.offer(curNode.left);
-                }
-                if (curNode.right != null) {
-                    q.offer(curNode.right);
-                }
+            if (curNode.left != null) {
+                q.offer(new NodeInfo(curNode.left, curLevel + 1));
+            }
+            if (curNode.right != null) {
+                q.offer(new NodeInfo(curNode.right, curLevel + 1));
             }
 
         }
         return level;
-
     }
+    // 내부 클래스 정의
+    static class NodeInfo {
+        TreeNode node;
+        int level;
 
+        NodeInfo(TreeNode node, int level) {
+            this.node = node;
+            this.level = level;
+        }
     }
 }
