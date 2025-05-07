@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0001-two-sum](https://github.com/Seung-zedd/LeetCode/tree/master/0001-two-sum) |
 | [0128-longest-consecutive-sequence](https://github.com/Seung-zedd/LeetCode/tree/master/0128-longest-consecutive-sequence) |
+| [0200-number-of-islands](https://github.com/Seung-zedd/LeetCode/tree/master/0200-number-of-islands) |
 | [0739-daily-temperatures](https://github.com/Seung-zedd/LeetCode/tree/master/0739-daily-temperatures) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1582-design-browser-history](https://github.com/Seung-zedd/LeetCode/tree/master/1582-design-browser-history) |
@@ -53,11 +54,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/Seung-zedd/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0200-number-of-islands](https://github.com/Seung-zedd/LeetCode/tree/master/0200-number-of-islands) |
 | [0744-network-delay-time](https://github.com/Seung-zedd/LeetCode/tree/master/0744-network-delay-time) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Matrix
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/Seung-zedd/LeetCode/tree/master/0200-number-of-islands) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/Seung-zedd/LeetCode/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Combinatorics
 |  |
@@ -67,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/Seung-zedd/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0200-number-of-islands](https://github.com/Seung-zedd/LeetCode/tree/master/0200-number-of-islands) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Seung-zedd/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0744-network-delay-time](https://github.com/Seung-zedd/LeetCode/tree/master/0744-network-delay-time) |
 ## Graph
@@ -120,6 +124,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/Seung-zedd/LeetCode/tree/master/0128-longest-consecutive-sequence) |
+| [0200-number-of-islands](https://github.com/Seung-zedd/LeetCode/tree/master/0200-number-of-islands) |
 ## Tree
 |  |
 | ------- |
