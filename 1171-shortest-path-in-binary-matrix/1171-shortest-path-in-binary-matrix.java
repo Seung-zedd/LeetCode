@@ -2,8 +2,8 @@ class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
-        int[] dr = {-1, 1, 0, 0, -1, 1, 1, -1};
-        int[] dc = {0, 0, -1, 1, -1, 1, -1, 1};
+        final int[] dr = {-1, 1, 0, 0, -1, 1, 1, -1};
+        final int[] dc = {0, 0, -1, 1, -1, 1, -1, 1};
         boolean[][] visited = new boolean[m][n];
         int count = 0;
 
