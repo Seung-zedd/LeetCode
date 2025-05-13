@@ -1,35 +1,36 @@
-class Solution{
+class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        int n = rooms.toArray().length;
+        {
+        int n = rooms.size();
         boolean[] visited = new boolean[n];
 
-        // 사전 세팅
-        visited[0] = true; // 0번방은 무조건 방문
+        // bfs 탐색
+        // queue: keys(Edge)들을 추가하기 위한 자료구조
         Queue<List<Integer>> q = new LinkedList<>();
+        visited[0] = true; // 0번방은 무조건 방문
         q.offer(rooms.getFirst());
 
         while (!q.isEmpty()) {
             List<Integer> keys = q.poll();
 
             for (Integer key : keys) {
-                // key에 해당하는 방을 방문하지 않았으면
                 if (!visited[key]) {
                     visited[key] = true;
-                    q.offer(rooms.get(key));
+                    q.offer(rooms.get(key)); // key에 해당하는 room에 들어가서 distinct keys를 얻음
+
                 }
             }
-
         }
-        // queue가 비었을 때 모든 visited가 true면 true를 리턴, 그렇지 않으면 false
-        int check = 0;
+
+        // 하나라도 방문을 안 했으면 false를 리턴
         for (boolean v : visited) {
-            if (v) {
-                check++;
+            if (!v) {
+                return false;
             }
         }
-        return check == visited.length ? true : false;
+
+        return true;
 
     }
-
-
+    }
 }
