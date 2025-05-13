@@ -1,6 +1,5 @@
 class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        {
         int n = rooms.size();
         boolean[] visited = new boolean[n];
 
@@ -31,6 +30,5 @@ class Solution {
 
         return true;
 
-    }
     }
 }
