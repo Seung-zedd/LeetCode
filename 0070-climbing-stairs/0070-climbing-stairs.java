@@ -1,16 +1,17 @@
 class Solution {
     public int climbStairs(int n) {
-        // input: n steps, output: distinct ways
-        int[] dp = new int[n + 1];
-        // base condition
-        dp[0] = 1; // 1 step
-        dp[1] = 2; // 2 step   
+        // input: steps, output: distinct ways
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 2; i < n + 1; i++) {
-            dp[i] = dp[i - 1] + dp[i - 2];
+        // base condition
+        map.put(1, 1);
+        map.put(2, 2);   
+
+        for (int i = 3; i < n + 1; i++) {
+           map.put(i, map.get(i - 1) + map.get(i - 2));
         }
 
-        return dp[n - 1];
+        return map.get(n);
         
     }
 
