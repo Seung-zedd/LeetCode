@@ -3,7 +3,7 @@ class Solution {
         // m x n 크기의 dp를 초기화
         int[][] dp = new int[m][n];
 
-        // 모서리를 1로 모두 채운다.
+        // 모서리를 1로 모두 채운다.(시점과 종점이 같을 때도 1을 리턴)
         for (int i = 0; i < m; i++) {
             dp[i][0] = 1;
         }
