@@ -3,19 +3,19 @@ class Solution {
         //* solve this problem using DP
         // initialize HashMap
         Map<Integer, Integer> map = new HashMap<>();
-
-        // call function if n is not in set
-        map.put(n, dp(n));
-
-        return map.get(n);
+        return dp(n, map);
      }
 
-    private static int dp(int x) {
+    private static int dp(int x, Map<Integer, Integer> map) {
         // base case
         if (x <= 1) {
             return x;
         }
 
-        return dp(x - 1) + dp(x - 2);
+        if (!map.containsKey(x)) {
+            map.put(x, dp(x - 1, map) + dp(x - 2, map));
+        }
+
+        return map.get(x);
     }
 }
